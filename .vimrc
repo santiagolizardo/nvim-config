@@ -27,6 +27,14 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/temp " This directory is used to store temporal/swap files.
 
+set viminfo='10,\"100,:20,%,n~/.vim/viminfo
+if 1 || has( 'autocmd' )
+	autocmd BufReadPost *
+		\ if line( "'\"" ) > 1 && line( "'\"" ) <= line( '$' ) |
+			\ exe "normal! g'\"" |
+		\ endif
+endif
+
 " Character encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -37,20 +45,20 @@ set hlsearch
 set ignorecase " Case insensitive by default
 set smartcase " If there are caps, go case-sensitive
 
-" Functions
-let is_file_explorer_enabled = 0
-function! ToggleFileExplorer()
-	if g:is_file_explorer_enabled == 0
-		NERDTree
-	else
-		NERDTreeClose
-	endif
-	let g:is_file_explorer_enabled = !g:is_file_explorer_enabled
-endfunction
-
 " Keyboard mappings
+if 0
+	map <up> <nop>
+	map <down> <nop>
+	map <left> <nop>
+	map <right> <nop>
+	imap <up> <nop>
+	imap <down> <nop>
+	imap <left> <nop>
+	imap <right> <nop>
+endif
+
 map <silent> <F2> :tabedit ~/.vim/cheatsheet.txt<CR>
-map <silent> <F5> :call ToggleFileExplorer()<CR>
+map <silent> <F5> :NERDTreeToggle<CR>
 
 map <C-w> :tabclose<CR>
 map <C-t> :tabnew<CR>
