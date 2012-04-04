@@ -12,9 +12,12 @@ set sidescrolloff=10 " Keep 5 lines at the size
 set showmatch " Show matching brackets
 syntax on " Enable syntax highlighting
 
+set t_Co=256
+let colorSchemeName="wombat256"
+
 " Set a color scheme only if the environment is capable of handle it
-if &t_Co > 2 || has( 'gui_running' )
-	colorscheme slate	
+if( &t_Co > 2 || has( 'gui_running' ) ) && filereadable( expand( "$HOME/.vim/colors/" . colorSchemeName . ".vim" ) )
+	colorscheme wombat256 
 endif
 
 set hidden " Hide buffers instead of closing them
