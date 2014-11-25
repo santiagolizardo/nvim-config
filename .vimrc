@@ -60,7 +60,6 @@ if 0
 	imap <right> <nop>
 endif
 
-map <silent> <F2> :tabedit ~/.vim/cheatsheet.txt<CR>
 map <silent> <F5> :NERDTreeToggle<CR>
 
 map <C-o> :CtrlP<CR>
