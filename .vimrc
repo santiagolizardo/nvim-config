@@ -63,7 +63,7 @@ endif
 map <silent> <F2> :tabedit ~/.vim/cheatsheet.txt<CR>
 map <silent> <F5> :NERDTreeToggle<CR>
 
-map <C-o> :CommandT<CR>
+map <C-o> :CtrlP<CR>
 
 map <C-x> :tabclose<CR>
 map <C-n> :tabnew<CR>
