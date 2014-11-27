@@ -2,6 +2,14 @@
 " Disable vi compatibility
 set nocompatible
 
+let g:pathogen_disabled = []
+
+" for some reason the csscolor plugin is very slow when run on the terminal
+" but not in GVim, so disable it if no GUI is running
+if !has( 'gui_running' )
+	call add( g:pathogen_disabled, 'css-color' )
+endif
+
 call pathogen#infect() 
 
 " Visual goodies
@@ -10,15 +18,18 @@ set ruler
 set scrolloff=10 " Keep 10 lines (top/bottom) for scope
 set sidescrolloff=10 " Keep 5 lines at the size
 set showmatch " Show matching brackets
-syntax on " Enable syntax highlighting
+syntax enable " Enable syntax highlighting without overriding color preferences
 
 set t_Co=256
-let colorSchemeName="wombat256"
 
-" Set a color scheme only if the environment is capable of handle it
-if( &t_Co > 2 || has( 'gui_running' ) ) && filereadable( expand( "$HOME/.vim/colors/" . colorSchemeName . ".vim" ) )
-	colorscheme wombat256 
+if has('gui_running')
+	set background=light
+else
+	set background=dark
 endif
+
+"colorscheme solarized
+colorscheme wombat256
 
 set hidden " Hide buffers instead of closing them
 
@@ -31,7 +42,7 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/temp " This directory is used to store temporal/swap files.
 
 set viminfo='10,\"100,:20,%,n~/.vim/viminfo
-if 1 || has( 'autocmd' )
+if has( 'autocmd' )
 	autocmd BufReadPost *
 		\ if line( "'\"" ) > 1 && line( "'\"" ) <= line( '$' ) |
 			\ exe "normal! g'\"" |
@@ -48,24 +59,16 @@ set hlsearch
 set ignorecase " Case insensitive by default
 set smartcase " If there are caps, go case-sensitive
 
-" Keyboard mappings
-if 0
-	map <up> <nop>
-	map <down> <nop>
-	map <left> <nop>
-	map <right> <nop>
-	imap <up> <nop>
-	imap <down> <nop>
-	imap <left> <nop>
-	imap <right> <nop>
-endif
-
-map <silent> <F5> :NERDTreeToggle<CR>
-
-map <C-o> :CtrlP<CR>
-
+" Keyboard mapping
 map <C-x> :tabclose<CR>
 map <C-n> :tabnew<CR>
 map <C-S-tab> :tabprevious<CR>
 map <C-tab> :tabnext<CR>
+
+" Plugin keyboard mapping
+map <silent> <F5> :NERDTreeToggle<CR> \
+nmap <F8> :TagbarToggle<CR> \
+map <C-o> :CtrlP<CR> \
+
+set tags=~/project_tags
 
