@@ -13,6 +13,7 @@ endif
 call pathogen#infect() 
 
 " Visual goodies
+set backspace=2
 set number " Line numbers
 set ruler
 set scrolloff=10 " Keep 10 lines (top/bottom) for scope
@@ -66,9 +67,9 @@ map <C-S-tab> :tabprevious<CR>
 map <C-tab> :tabnext<CR>
 
 " Plugin keyboard mapping
-map <silent> <F5> :NERDTreeToggle<CR> \
-nmap <F8> :TagbarToggle<CR> \
-map <C-o> :CtrlP<CR> \
+map <silent> <F5> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+map <C-o> :CtrlP<CR>
 
 set tags=~/project_tags
 

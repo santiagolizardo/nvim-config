@@ -1,0 +1,6 @@
+
+snippet zend-parse-2 
+	if( zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "${1: }${2: }", &${3: }, &${4: }) == FAILURE) {
+		WRONG_PARAM_COUNT;
+	}
+
