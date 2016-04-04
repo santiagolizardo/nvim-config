@@ -12,6 +12,10 @@ endif
 
 call pathogen#infect() 
 
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " Visual goodies
 set backspace=2
 set number " Line numbers
