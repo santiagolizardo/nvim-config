@@ -15,6 +15,9 @@ call pathogen#infect()
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set copyindent
+set preserveindent
+set softtabstop=0
 
 " Visual goodies
 set backspace=2
@@ -97,4 +100,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+set listchars=tab:>-,eol:$
+set nolist
+
+au BufRead,BufNewFile *.twig set filetype=htmljinja
+
 
