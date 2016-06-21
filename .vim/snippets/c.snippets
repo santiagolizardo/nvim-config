@@ -4,3 +4,42 @@ snippet zend-parse-2
 		WRONG_PARAM_COUNT;
 	}
 
+snippet zend-arg-info-0
+	ZEND_BEGIN_ARG_INFO_EX(arginfo_${1}, 0, 0, 0)
+	ZEND_END_ARG_INFO()
+
+snippet zend-arg-info-1
+	ZEND_BEGIN_ARG_INFO_EX(arginfo_${1}, 0, 0, 1)
+	ZEND_ARG_INFO(0, ${2})
+	ZEND_END_ARG_INFO()
+
+snippet zend-arg-info-2
+	ZEND_BEGIN_ARG_INFO_EX(arginfo_${1}, 0, 0, 2)
+	ZEND_ARG_INFO(0, ${2})
+	ZEND_ARG_INFO(0, ${3})
+	ZEND_END_ARG_INFO()
+
+snippet zend-arg-info-3
+	ZEND_BEGIN_ARG_INFO_EX(arginfo_${1}, 0, 0, 3)
+	ZEND_ARG_INFO(0, ${2})
+	ZEND_ARG_INFO(0, ${3})
+	ZEND_ARG_INFO(0, ${4})
+	ZEND_END_ARG_INFO()
+
+snippet zend-arg-info-4
+	ZEND_BEGIN_ARG_INFO_EX(arginfo_${1}, 0, 0, 4)
+	ZEND_ARG_INFO(0, ${2})
+	ZEND_ARG_INFO(0, ${3})
+	ZEND_ARG_INFO(0, ${4})
+	ZEND_ARG_INFO(0, ${5})
+	ZEND_END_ARG_INFO()
+
+snippet zend-arg-info-5
+	ZEND_BEGIN_ARG_INFO_EX(arginfo_${1}, 0, 0, 5)
+	ZEND_ARG_INFO(0, ${2})
+	ZEND_ARG_INFO(0, ${3})
+	ZEND_ARG_INFO(0, ${4})
+	ZEND_ARG_INFO(0, ${5})
+	ZEND_ARG_INFO(0, ${6})
+	ZEND_END_ARG_INFO()
+
