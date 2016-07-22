@@ -22,7 +22,11 @@ set softtabstop=0
 " Visual goodies
 set backspace=2
 set number " Line numbers
-set ruler
+
+" Hide some command line info
+set noruler
+set noshowmode
+
 set scrolloff=10 " Keep 10 lines (top/bottom) for scope
 set sidescrolloff=10 " Keep 5 lines at the size
 set showmatch " Show matching brackets
@@ -92,9 +96,14 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
+" Show status line
+set laststatus=2
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+let g:airline_powerline_fonts = 1
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
