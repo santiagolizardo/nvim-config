@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/signify"]
 	path = .vim/bundle/signify
 	url = https://github.com/mhinz/vim-signify.git
+[submodule ".vim/bundle/yajs"]
+	path = .vim/bundle/yajs
+	url = https://github.com/othree/yajs.vim

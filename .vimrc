@@ -110,11 +110,14 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'passive_filetypes': ['c'] }
+let g:syntastic_javascript_checkers = ['eslint']
 
 set listchars=tab:>-,eol:$
 set nolist
 
 au BufRead,BufNewFile *.twig set filetype=htmljinja
+au BufRead,BufNewFile *.nasm set filetype=nasm
+au BufRead,BufNewFile *.es6 set filetype=javascript
 
-let NERDTreeIgnore = ['\.lo$', '\.o$']
+let NERDTreeIgnore = ['\.lo$', '\.o$', '\.pyc']
 
