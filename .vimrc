@@ -91,9 +91,9 @@ let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'dir': '\.git$\|\.hg$\|\.svn$\|bower_components$\|node_modules$',
   \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
+  \ 'link': 'some_bad_symbolic_links'
   \ }
 
 " Show status line
