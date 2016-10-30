@@ -2,19 +2,11 @@
 " Disable vi compatibility
 set nocompatible
 
-let g:pathogen_disabled = []
-
-" for some reason the csscolor plugin is very slow when run on the terminal
-" but not in GVim, so disable it if no GUI is running
-if !has( 'gui_running' )
-	call add( g:pathogen_disabled, 'css-color' )
-endif
-
-call pathogen#infect() 
-
+" Indentation
+set autoindent
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 set copyindent
 set preserveindent
 set softtabstop=0
@@ -33,6 +25,7 @@ set showmatch " Show matching brackets
 syntax enable " Enable syntax highlighting without overriding color preferences
 
 set t_Co=256
+let g:solarized_termcolors=256
 
 if has('gui_running')
 	set background=light
@@ -100,7 +93,9 @@ let g:ctrlp_custom_ignore = {
 set laststatus=2
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+if exists('SyntasticStatuslineFlag')
+	set statusline+=%{SyntasticStatuslineFlag()}
+endif
 set statusline+=%*
 
 let g:airline_powerline_fonts = 1
@@ -119,5 +114,5 @@ au BufRead,BufNewFile *.twig set filetype=htmljinja
 au BufRead,BufNewFile *.nasm set filetype=nasm
 au BufRead,BufNewFile *.es6 set filetype=javascript
 
-let NERDTreeIgnore = ['\.lo$', '\.o$', '\.pyc']
+let NERDTreeIgnore = ['\.lo$', '\.o$', '\.pyc', '\.map']
 
