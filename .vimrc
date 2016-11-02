@@ -71,13 +71,15 @@ map <C-S-tab> :tabprevious<CR>
 map <C-tab> :tabnext<CR>
 
 " Plugin keyboard mapping
-map <silent> <F5> :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
-map <C-o> :CtrlP<CR>
+nmap <silent> <F5> :NERDTreeToggle<CR>
+nmap <silent> <F8> :TagbarToggle<CR>
+nmap <silent> <C-o>f :CtrlP<CR>
+nmap <silent> <C-o>b :CtrlPBuffer<CR>
 
-set tags=~/project_tags
 
-set wildignore+=*/tmp/*,*/temp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set tags=./tags,tags
+
+set wildignore+=*/tmp/*,*/temp/*,*.so,*.swp,*.zip,*.pyc     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_max_files=0
@@ -99,11 +101,17 @@ endif
 set statusline+=%*
 
 let g:airline_powerline_fonts = 1
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_mode_map = { 'passive_filetypes': ['c'] }
 let g:syntastic_javascript_checkers = ['eslint']
 
