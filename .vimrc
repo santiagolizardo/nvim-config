@@ -52,6 +52,8 @@ if has( 'autocmd' )
 		\ if line( "'\"" ) > 1 && line( "'\"" ) <= line( '$' ) |
 			\ exe "normal! g'\"" |
 		\ endif
+
+	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 endif
 
 " Character encoding
@@ -121,6 +123,7 @@ set nolist
 au BufRead,BufNewFile *.twig set filetype=htmljinja
 au BufRead,BufNewFile *.nasm set filetype=nasm
 au BufRead,BufNewFile *.es6 set filetype=javascript
+au BufRead,BufNewFile *.plt set filetype=gnuplot
 
 let NERDTreeIgnore = ['\.lo$', '\.o$', '\.pyc', '\.map']
 
