@@ -43,3 +43,6 @@
 [submodule ".vim/pack/ide/opt/goyo"]
 	path = .vim/pack/ide/opt/goyo
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule ".vim/pack/ide/start/elixir"]
+	path = .vim/pack/ide/start/elixir
+	url = https://github.com/huffman/vim-elixir.git
