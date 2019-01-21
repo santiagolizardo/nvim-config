@@ -46,3 +46,6 @@
 [submodule ".vim/pack/ide/start/elixir"]
 	path = .vim/pack/ide/start/elixir
 	url = https://github.com/huffman/vim-elixir.git
+[submodule ".vim/pack/ide/start/vim-glsl"]
+	path = .vim/pack/ide/start/vim-glsl
+	url = git@github.com:tikhomirov/vim-glsl.git
