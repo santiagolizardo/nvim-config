@@ -66,18 +66,7 @@ set hlsearch
 set ignorecase " Case insensitive by default
 set smartcase " If there are caps, go case-sensitive
 
-" Keyboard mapping
-map <C-x> :tabclose<CR>
-map <C-n> :tabnew<CR>
-map <C-S-tab> :tabprevious<CR>
-map <C-tab> :tabnext<CR>
-
-" Plugin keyboard mapping
-nmap <silent> <F5> :NERDTreeToggle<CR>
-nmap <silent> <F8> :TagbarToggle<CR>
-nmap <silent> <C-o>f :CtrlP<CR>
-nmap <silent> <C-o>b :CtrlPBuffer<CR>
-
+source ~/.vim/mapping.vim
 
 set tags=./tags,tags
 
