@@ -49,3 +49,6 @@
 [submodule ".vim/pack/ide/start/vim-glsl"]
 	path = .vim/pack/ide/start/vim-glsl
 	url = git@github.com:tikhomirov/vim-glsl.git
+[submodule ".vim/pack/ide/start/nerdcommenter"]
+	path = .vim/pack/ide/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
