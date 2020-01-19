@@ -4,16 +4,25 @@
 
 VIm configured to be used as an *Integrated Development Environment* (a.k.a. IDE)
 
-## Feature
+## Features
 
 * File manager/explorer
 * Jump to file/tab
-* Syntax highlighting and validation
+* Syntax highlighting and validation (linting)
 * Status bar with Git branch indication
-* Modern Javascript (ES6) support
 * Class outliner
 * Git annotations
+* Modern Javascript (ES6) support
+* Symbols (class, class members, functions, etc) outliner 
 * Much more!
+
+## How to use
+
+```sh
+$ git clone --recurse-submodules git@github.com:santiagolizardo/vim-ide.git
+$ ln -sf $PWD/vim-ide/.vim ~/.vim
+$ ln -sf $PWD/vim-ide/.vimrc ~/.vimrc
+```
 
 ## Under the hood
 
