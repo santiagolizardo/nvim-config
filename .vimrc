@@ -105,6 +105,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_mode_map = { 'passive_filetypes': ['c'] }
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_python_exec = 'python3'
 
 set listchars=tab:>-,eol:$
 set nolist
