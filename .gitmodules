@@ -52,3 +52,6 @@
 [submodule ".vim/pack/ide/start/nerdcommenter"]
 	path = .vim/pack/ide/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule ".vim/pack/ide/start/fugitive"]
+	path = .vim/pack/ide/start/fugitive
+	url = git@github.com:tpope/vim-fugitive.git
