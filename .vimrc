@@ -115,6 +115,7 @@ au BufRead,BufNewFile *.nasm set filetype=nasm
 au BufRead,BufNewFile *.es6 set filetype=javascript
 au BufRead,BufNewFile *.plt set filetype=gnuplot
 au BufRead,BufNewFile *.gv set filetype=dot
+au BufNewFile,BufRead Jenkinsfile setf groovy
 
 let NERDTreeIgnore = ['\.lo$', '\.o$', '\.pyc', '\.map', '\.git']
 let g:NERDTreeShowHidden = 1
