@@ -8,6 +8,7 @@ VIm configured to be used as an *Integrated Development Environment* (a.k.a. IDE
 
 * File manager/explorer
 * Jump to file/tab
+* Jump to symbol (method, class, function)
 * Syntax highlighting and validation (linting)
 * Status bar with Git branch indication
 * Class outliner
@@ -29,6 +30,7 @@ $ ln -sf $PWD/vim-ide/.vimrc ~/.vimrc
 Under the hood this is nothing more than VIm with a bunch of preconfigured plugins. The full list of plugins follows:
 
 * CTRLp (fuzzy finder)
+* Gutentags (ctags)
 * NerdTree (file tree)
 * Syntastic
 * VIm airline
