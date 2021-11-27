@@ -37,7 +37,6 @@ Under the hood this is nothing more than VIm with a bunch of preconfigured plugi
 * VIm airline
 * VIm signify (version control in status bar)
 * Tagbar (symbol navigation)
-* Surround (character pair handling)
 * CTRLsf (code search)
 * YAJS
 

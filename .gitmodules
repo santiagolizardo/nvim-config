@@ -19,9 +19,6 @@
 [submodule ".vim/pack/ide/start/tagbar"]
 	path = .vim/pack/ide/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule ".vim/pack/ide/start/surround"]
-	path = .vim/pack/ide/start/surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule ".vim/pack/ide/start/tlib"]
 	path = .vim/pack/ide/start/tlib
 	url = https://github.com/tomtom/tlib_vim.git
