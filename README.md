@@ -20,9 +20,9 @@ VIm configured to be used as an *Integrated Development Environment* (a.k.a. IDE
 ## How to use
 
 ```sh
-$ git clone --recurse-submodules git@github.com:santiagolizardo/vim-ide.git
-$ ln -sf $PWD/vim-ide/.vim ~/.vim
-$ ln -sf $PWD/vim-ide/.vimrc ~/.vimrc
+git clone --recurse-submodules git@github.com:santiagolizardo/vim-ide.git
+ln -sf $PWD/vim-ide/.vim ~/.vim
+ln -sf $PWD/vim-ide/.vimrc ~/.vimrc
 ```
 
 ## Under the hood
@@ -38,18 +38,7 @@ Under the hood this is nothing more than VIm with a bunch of preconfigured plugi
 * VIm signify
 * Tagbar
 * TComment
-* Colors solarized
 * Surround
 * CTRLsf
 * Goyo
-
-## Use
-
-```sh
-$ git clone git@github.com:santiagolizardo/vim-ide.git
-$ git submodule update --init
-$ cd vim-ide
-$ ln -s .vimrc ~/.vimrc
-$ ln -s .vim ~/.vim
-```
 
