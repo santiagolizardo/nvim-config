@@ -28,12 +28,6 @@
 [submodule ".vim/pack/ide/opt/ctrlsf"]
 	path = .vim/pack/ide/opt/ctrlsf
 	url = https://github.com/dyng/ctrlsf.vim.git
-[submodule ".vim/pack/ide/opt/seoul256"]
-	path = .vim/pack/ide/opt/seoul256
-	url = https://github.com/junegunn/seoul256.vim.git
-[submodule ".vim/pack/ide/opt/goyo"]
-	path = .vim/pack/ide/opt/goyo
-	url = https://github.com/junegunn/goyo.vim.git
 [submodule ".vim/pack/ide/start/nerdcommenter"]
 	path = .vim/pack/ide/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git

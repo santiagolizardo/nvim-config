@@ -31,14 +31,13 @@ Under the hood this is nothing more than VIm with a bunch of preconfigured plugi
 
 * CTRLp (fuzzy finder)
 * Gutentags (ctags)
+* NerdCommenter
 * NerdTree (file tree)
-* Syntastic
+* Syntastic (syntac check)
 * VIm airline
+* VIm signify (version control in status bar)
+* Tagbar (symbol navigation)
+* Surround (character pair handling)
+* CTRLsf (code search)
 * YAJS
-* VIm signify
-* Tagbar
-* TComment
-* Surround
-* CTRLsf
-* Goyo
 
