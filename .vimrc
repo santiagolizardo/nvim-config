@@ -25,7 +25,6 @@ set showmatch " Show matching brackets
 syntax enable " Enable syntax highlighting without overriding color preferences
 
 set t_Co=256
-let g:solarized_termcolors=256
 
 if has('gui_running')
 	set background=light
@@ -33,7 +32,6 @@ else
 	set background=dark
 endif
 
-"colorscheme solarized
 colorscheme wombat256
 
 set hidden " Hide buffers instead of closing them
