@@ -34,3 +34,6 @@
 [submodule ".vim/pack/ide/start/gutentags"]
 	path = .vim/pack/ide/start/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags
+[submodule ".vim/pack/ide/start/gruvbox"]
+	path = .vim/pack/ide/start/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
