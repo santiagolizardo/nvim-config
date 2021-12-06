@@ -86,7 +86,11 @@ set smartcase " If there are caps, go case-sensitive
 
 source ~/.vim/mapping.vim
 
-set tags=./tags,tags
+if executable('ctags')
+	set tags=./tags,tags
+else
+	let g:gutentags_enabled=0
+endif
 
 set wildignore+=*/tmp/*,*/temp/*,*.so,*.swp,*.zip,*.pyc|     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe|  " Windows
