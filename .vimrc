@@ -57,6 +57,7 @@ filetype plugin indent on
 
 " Enable backups if backup directory exists
 if isdirectory($HOME."/.vim/backup")
+	set writebackup
 	set backup
 	set backupdir=~/.vim/backup
 endif
@@ -85,12 +86,6 @@ set ignorecase " Make search case insensitive
 set smartcase " If there are caps, go case-sensitive
 
 source ~/.vim/mapping.vim
-
-if executable('ctags')
-	set tags=./tags,tags
-else
-	let g:gutentags_enabled=0
-endif
 
 set wildignore+=*/tmp/*,*/temp/*,*.so,*.swp,*.zip,*.pyc|     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe|  " Windows
@@ -141,4 +136,26 @@ let g:syntastic_python_python_exec = 'python3'
 
 let g:NERDTreeIgnore = ['\.lo$', '\.o$', '\.pyc', '\.map', '\.git']
 let g:NERDTreeShowHidden = 1
+
+if &diff
+    " diff mode
+    set diffopt+=iwhite
+endif
+
+augroup VimrcHooks | au!
+augroup END
+au VimrcHooks BufWritePre * let &backupext = '~' . localtime()
+au VimrcHooks VimLeave * call <SID>DeleteOldBackups()
+function! s:DeleteOldBackups()
+	" Delete backups over 14 days old
+	let l:Old = (60 * 60 * 24 * 14)
+	let l:BackupFiles = split(glob(&backupdir."/*", 1)."\n".glob(&backupdir."/.[^.]*",1), "\n")
+	let l:Now = localtime()
+
+	for l:File in l:BackupFiles
+		if (l:Now - getftime(l:File)) > l:Old
+			call delete(l:File)
+		endif
+	endfor
+endfunction
 
