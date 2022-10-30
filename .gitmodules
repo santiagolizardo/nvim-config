@@ -19,36 +19,12 @@
 [submodule ".vim/pack/ide/start/tagbar"]
 	path = .vim/pack/ide/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule ".vim/pack/ide/start/tcomment"]
-	path = .vim/pack/ide/start/tcomment
-	url = https://github.com/tomtom/tcomment_vim.git
-[submodule ".vim/pack/ide/start/colors-solarized"]
-	path = .vim/pack/ide/start/colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/pack/ide/start/surround"]
-	path = .vim/pack/ide/start/surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule ".vim/pack/ide/start/tlib"]
 	path = .vim/pack/ide/start/tlib
 	url = https://github.com/tomtom/tlib_vim.git
-[submodule ".vim/pack/ide/start/addon-mw-utils"]
-	path = .vim/pack/ide/start/addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule ".vim/pack/ide/opt/ctrlsf"]
 	path = .vim/pack/ide/opt/ctrlsf
 	url = https://github.com/dyng/ctrlsf.vim.git
-[submodule ".vim/pack/ide/opt/seoul256"]
-	path = .vim/pack/ide/opt/seoul256
-	url = https://github.com/junegunn/seoul256.vim.git
-[submodule ".vim/pack/ide/opt/goyo"]
-	path = .vim/pack/ide/opt/goyo
-	url = https://github.com/junegunn/goyo.vim.git
-[submodule ".vim/pack/ide/start/elixir"]
-	path = .vim/pack/ide/start/elixir
-	url = https://github.com/huffman/vim-elixir.git
-[submodule ".vim/pack/ide/start/vim-glsl"]
-	path = .vim/pack/ide/start/vim-glsl
-	url = https://github.com/tikhomirov/vim-glsl.git
 [submodule ".vim/pack/ide/start/nerdcommenter"]
 	path = .vim/pack/ide/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
@@ -58,3 +34,6 @@
 [submodule ".vim/pack/ide/start/gutentags"]
 	path = .vim/pack/ide/start/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags
+[submodule ".vim/pack/ide/start/gruvbox"]
+	path = .vim/pack/ide/start/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
