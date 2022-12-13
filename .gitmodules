@@ -37,3 +37,6 @@
 [submodule ".vim/pack/ide/start/gruvbox"]
 	path = .vim/pack/ide/start/gruvbox
 	url = git@github.com:morhetz/gruvbox.git
+[submodule ".vim/pack/ide/start/vim-jinja"]
+	path = .vim/pack/ide/start/vim-jinja
+	url = git@github.com:lepture/vim-jinja.git

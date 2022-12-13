@@ -109,6 +109,7 @@ au BufRead,BufNewFile *.es6 set filetype=javascript
 au BufRead,BufNewFile *.plt set filetype=gnuplot
 au BufRead,BufNewFile *.gv set filetype=dot
 au BufNewFile,BufRead Jenkinsfile setf groovy
+au BufNewFile,BufRead *.jinja set ft=jinja
 
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
