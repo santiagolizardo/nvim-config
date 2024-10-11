@@ -85,7 +85,7 @@ set hlsearch " Highlight search matches
 set ignorecase " Make search case insensitive
 set smartcase " If there are caps, go case-sensitive
 
-source ~/.vim/mapping.vim
+source $HOME/.config/nvim/mapping.vim
 
 set wildignore+=*/tmp/*,*/temp/*,*.so,*.swp,*.zip,*.pyc|     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe|  " Windows
@@ -110,6 +110,7 @@ au BufRead,BufNewFile *.plt set filetype=gnuplot
 au BufRead,BufNewFile *.gv set filetype=dot
 au BufNewFile,BufRead Jenkinsfile setf groovy
 au BufNewFile,BufRead *.jinja set ft=jinja
+autocmd! BufNewFile,BufRead *.vs,*.fs,*.glsl set ft=glsl
 
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40

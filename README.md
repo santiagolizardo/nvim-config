@@ -1,8 +1,6 @@
-# VIm IDE
+# Neovim configuration files 
 
-## What is it?
-
-VIm configured to be used as an *Integrated Development Environment* (a.k.a. IDE)
+Neovim configured to be used as programming editor. 
 
 ## Features
 
@@ -20,9 +18,8 @@ VIm configured to be used as an *Integrated Development Environment* (a.k.a. IDE
 ## How to use
 
 ```sh
-git clone --recurse-submodules git@github.com:santiagolizardo/vim-ide.git
-ln -sf $PWD/vim-ide/.vim ~/.vim
-ln -sf $PWD/vim-ide/.vimrc ~/.vimrc
+git clone --recurse-submodules git@github.com:santiagolizardo/nvim-config.git
+make links
 ```
 
 ## Under the hood
@@ -39,4 +36,5 @@ Under the hood this is nothing more than VIm with a bunch of preconfigured plugi
 * Tagbar (symbol navigation)
 * CTRLsf (code search)
 * YAJS
+* vim-glsl
 
