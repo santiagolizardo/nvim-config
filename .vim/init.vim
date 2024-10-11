@@ -2,7 +2,7 @@
 " Disable VI compatibility
 set nocompatible
 
-source ~/.vim/functions.vim
+source $HOME/.config/nvim/functions.vim
 
 " Fix to issue of Vim starting in replace mode in Windows
 " See: https://superuser.com/questions/1284561/why-is-vim-starting-in-replace-mode
@@ -138,6 +138,9 @@ let g:syntastic_python_python_exec = 'python3'
 
 let g:NERDTreeIgnore = ['\.lo$', '\.o$', '\.pyc', '\.map', '\.git']
 let g:NERDTreeShowHidden = 1
+
+let g:tagbar_autoclose = 1
+let g:tagbar_autofocus = 1
 
 if &diff
     " diff mode
