@@ -33,10 +33,10 @@
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule ".vim/pack/ide/start/gruvbox"]
 	path = .vim/pack/ide/start/gruvbox
-	url = git@github.com:morhetz/gruvbox.git
+	url = https://github.com/morhetz/gruvbox.git
 [submodule ".vim/pack/ide/start/vim-jinja"]
 	path = .vim/pack/ide/start/vim-jinja
-	url = git@github.com:lepture/vim-jinja.git
+	url = https://github.com/lepture/vim-jinja.git
 [submodule ".vim/pack/syntax/start/vim-glsl"]
 	path = .vim/pack/syntax/start/vim-glsl
 	url = https://github.com/tikhomirov/vim-glsl.git
