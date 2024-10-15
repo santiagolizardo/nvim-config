@@ -26,11 +26,11 @@ make links
 
 Under the hood this is nothing more than VIm with a bunch of preconfigured plugins. The full list of plugins follows:
 
-* CTRLp (fuzzy finder)
-* Gutentags (ctags)
-* NerdCommenter
-* NerdTree (file tree)
-* Syntastic (syntac check)
+* [CTRLp](https://github.com/ctrlpvim/ctrlp.vim) (fuzzy finder)
+* [Gutentags](https://github.com/ludovicchabant/vim-gutentags) (ctags)
+* [NerdCommenter](https://github.com/preservim/nerdcommenter)
+* [NerdTree](https://github.com/preservim/nerdtree) (file tree)
+* [ALE](https://github.com/dense-analysis/ale.git) (syntax check)
 * VIm airline
 * VIm signify (version control in status bar)
 * Tagbar (symbol navigation)

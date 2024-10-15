@@ -129,15 +129,6 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-let g:syntastic_mode_map = { 'passive_filetypes': ['c'] }
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_python_python_exec = 'python3'
-
 let g:NERDTreeIgnore = ['\.lo$', '\.o$', '\.pyc', '\.map', '\.git']
 let g:NERDTreeShowHidden = 1
 
