@@ -44,6 +44,10 @@ set showmatch
 set cursorcolumn
 set cursorline
 
+"==================
+" Syntax and Colors
+"==================
+
 " Enable syntax highlighting without overriding color preferences
 syntax enable
 
@@ -81,7 +85,9 @@ endif
 set encoding=utf-8
 set fileencoding=utf-8
 
-" Search
+"================
+" Search Settings
+"================
 set incsearch " Moves cursor to search as one types
 set hlsearch " Highlight search matches
 set ignorecase " Make search case insensitive
@@ -144,16 +150,4 @@ augroup VimrcHooks | au!
 augroup END
 au VimrcHooks BufWritePre * let &backupext = '~' . localtime()
 au VimrcHooks VimLeave * call <SID>DeleteOldBackups()
-function! s:DeleteOldBackups()
-	" Delete backups over 14 days old
-	let l:Old = (60 * 60 * 24 * 14)
-	let l:BackupFiles = split(glob(&backupdir."/*", 1)."\n".glob(&backupdir."/.[^.]*",1), "\n")
-	let l:Now = localtime()
-
-	for l:File in l:BackupFiles
-		if (l:Now - getftime(l:File)) > l:Old
-			call delete(l:File)
-		endif
-	endfor
-endfunction
 

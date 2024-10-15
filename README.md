@@ -26,15 +26,15 @@ make links
 
 Under the hood this is nothing more than VIm with a bunch of preconfigured plugins. The full list of plugins follows:
 
-* [CTRLp](https://github.com/ctrlpvim/ctrlp.vim) (fuzzy finder)
-* [Gutentags](https://github.com/ludovicchabant/vim-gutentags) (ctags)
+* [CTRLp](https://github.com/ctrlpvim/ctrlp.vim): Fuzzy finder
+* [Gutentags](https://github.com/ludovicchabant/vim-gutentags): Outline
 * [NerdCommenter](https://github.com/preservim/nerdcommenter)
-* [NerdTree](https://github.com/preservim/nerdtree) (file tree)
-* [ALE](https://github.com/dense-analysis/ale.git) (syntax check)
-* VIm airline
-* VIm signify (version control in status bar)
-* Tagbar (symbol navigation)
-* CTRLsf (code search)
-* YAJS
-* vim-glsl
+* [NerdTree](https://github.com/preservim/nerdtree): File tree
+* [ALE](https://github.com/dense-analysis/ale.git): Syntax check
+* [VIm airline](https://github.com/vim-airline/vim-airline): Status/tabline
+* [VIm signify](https://github.com/mhinz/vim-signify): Version control annotations
+* [Tagbar](https://github.com/preservim/tagbar): Symbol navigation
+* [CTRLsf](https://github.com/dyng/ctrlsf.vim) (code search
+* [YAJS](https://github.com/othree/yajs.vim): Javascript syntax
+* [vim-glsl](https://github.com/tikhomirov/vim-glsl): GLSL syntax
 
