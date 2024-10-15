@@ -1,8 +1,10 @@
 
+let $NVIM_CONFIG_DIR=stdpath('config')
+
 " Disable VI compatibility
 set nocompatible
 
-source $HOME/.config/nvim/functions.vim
+source $NVIM_CONFIG_DIR/functions.vim
 
 " Fix to issue of Vim starting in replace mode in Windows
 " See: https://superuser.com/questions/1284561/why-is-vim-starting-in-replace-mode
@@ -85,7 +87,7 @@ set hlsearch " Highlight search matches
 set ignorecase " Make search case insensitive
 set smartcase " If there are caps, go case-sensitive
 
-source $HOME/.config/nvim/mapping.vim
+source $NVIM_CONFIG_DIR/mapping.vim
 
 set wildignore+=*/tmp/*,*/temp/*,*.so,*.swp,*.zip,*.pyc|     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe|  " Windows
