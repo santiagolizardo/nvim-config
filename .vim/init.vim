@@ -61,17 +61,8 @@ set hidden
 " Enables detection, plugin and indent when loading new files
 filetype plugin indent on
 
-" Enable backups if backup directory exists
-if isdirectory($HOME."/.vim/backup")
-	set writebackup
-	set backup
-	set backupdir=~/.vim/backup
-endif
-
-" This directory is used to store temporal/swap files.
-set directory=~/.vim/temp
-
-set viminfo='10,\"100,:20,%,n~/.vim/viminfo
+" Disable backups
+set nobackup nowritebackup
 
 if has( 'autocmd' )
 	autocmd BufReadPost *
@@ -102,23 +93,23 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe|  " Windows
 set laststatus=2
 
 set statusline+=%#warningmsg#
-if exists('SyntasticStatuslineFlag')
-	set statusline+=%{SyntasticStatuslineFlag()}
-endif
 set statusline+=%*
 
 " Determines how to render tabs and end of lines
 set listchars=tab:>-,eol:$
 set nolist " Do not show special chars
 
-au BufRead,BufNewFile *.twig set filetype=htmljinja
-au BufRead,BufNewFile *.nasm set filetype=nasm
-au BufRead,BufNewFile *.es6 set filetype=javascript
-au BufRead,BufNewFile *.plt set filetype=gnuplot
-au BufRead,BufNewFile *.gv set filetype=dot
-au BufNewFile,BufRead Jenkinsfile setf groovy
-au BufNewFile,BufRead *.jinja set ft=jinja
-autocmd! BufNewFile,BufRead *.vs,*.fs,*.glsl set ft=glsl
+augroup FiletypeDetection
+  autocmd!
+  autocmd BufRead,BufNewFile *.twig        set filetype=htmljinja
+  autocmd BufRead,BufNewFile *.nasm        set filetype=nasm
+  autocmd BufRead,BufNewFile *.es6         set filetype=javascript
+  autocmd BufRead,BufNewFile *.plt         set filetype=gnuplot
+  autocmd BufRead,BufNewFile *.gv          set filetype=dot
+  autocmd BufRead,BufNewFile Jenkinsfile   set filetype=groovy
+  autocmd BufRead,BufNewFile *.jinja       set filetype=jinja
+  autocmd BufRead,BufNewFile *.vs,*.fs,*.glsl set filetype=glsl
+augroup END
 
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
@@ -145,9 +136,3 @@ if &diff
     " diff mode
     set diffopt+=iwhite
 endif
-
-augroup VimrcHooks | au!
-augroup END
-au VimrcHooks BufWritePre * let &backupext = '~' . localtime()
-au VimrcHooks VimLeave * call <SID>DeleteOldBackups()
-

@@ -7,7 +7,7 @@ links:
 unlinks:
 	rm -f ~/.config/nvim
 
-.PHONY: update-submodule
+.PHONY: update-submodules
 update-submodules:
 	git submodule update --recursive --remote
 
