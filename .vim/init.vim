@@ -101,6 +101,7 @@ set nolist " Do not show special chars
 
 augroup FiletypeDetection
   autocmd!
+  autocmd BufNewFile,BufRead *.prolog 	   set filetype=prolog
   autocmd BufRead,BufNewFile *.twig        set filetype=htmljinja
   autocmd BufRead,BufNewFile *.nasm        set filetype=nasm
   autocmd BufRead,BufNewFile *.es6         set filetype=javascript
